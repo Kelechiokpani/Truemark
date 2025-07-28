@@ -26,7 +26,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         transition={{ duration: 1, delay: id }}
         viewport={{ once: true }}
         href={href}
-        className="animate_top mx-w-full relative block h-10 w-full"
+        className="animate_top mx-w-full w-[98px] relative block  w-full sm:text-xs "
         // className="animate_top mx-w-full relative block h-10 w-[98px]"
       >
         <SectionHeader
