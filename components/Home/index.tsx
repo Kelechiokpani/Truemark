@@ -117,22 +117,35 @@ const Hero = () => {
                   className="absolute -right-8.5 bottom-0 z-1"
                 />
                 <div className=" relative aspect-500/300 w-full">
-                <Image
-                    className="shadow-solid-l dark:hidden rounded-2xl"
-                    // src="/images/hero/hero-light.svg"
-                    src={ISSO}
-                    alt="Hero"
-                    width={550}
-                    height={550}
-                  />
-                  <Image
-                    className="hidden shadow-solid-l dark:block rounded-2xl"
-                    // src="/images/hero/hero-dark.svg"
-                    src={ISSO}
-                    alt="Hero"
-                   width={550}
-                   height={550}
-                  />
+
+                  <motion.div
+                    initial={{ y: 0 }}
+                    animate={{ y: [0, -15, 0] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="relative aspect-500/300 w-full"
+                  >
+
+                    <Image
+                      className="shadow-solid-l dark:hidden rounded-2xl"
+                      // src="/images/hero/hero-light.svg"
+                      src={ISSO}
+                      alt="Hero"
+                      width={550}
+                      height={550}
+                    />
+                    <Image
+                      className="hidden shadow-solid-l dark:block rounded-2xl"
+                      // src="/images/hero/hero-dark.svg"
+                      src={ISSO}
+                      alt="Hero"
+                      width={550}
+                      height={550}
+                    />
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -140,7 +153,7 @@ const Hero = () => {
         </div>
       </section>
     </>
-  );
+);
 };
 
 export default Hero;
