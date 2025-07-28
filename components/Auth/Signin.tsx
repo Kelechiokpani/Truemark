@@ -3,12 +3,20 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 
 const Signin = () => {
+  const router = useRouter();
+
   const [data, setData] = useState({
     email: "",
     password: "",
   });
+
+  const handleRoute = () => {
+    router.push("/dashboard");
+  }
 
   return (
     <>
@@ -167,6 +175,7 @@ const Signin = () => {
                 </div>
 
                 <button
+                  onClick={handleRoute}
                   aria-label="login with email and password"
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
                 >
