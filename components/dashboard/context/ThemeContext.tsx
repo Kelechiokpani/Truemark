@@ -3,7 +3,8 @@
 import type React from "react";
 import { createContext, useState, useContext, useEffect } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "light" | "#191c31";
+// type Theme = "light" | "dark";
 
 type ThemeContextType = {
   theme: Theme;
@@ -30,16 +31,16 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     if (isInitialized) {
       localStorage.setItem("theme", theme);
-      if (theme === "dark") {
-        document.documentElement.classList.add("dark");
+      if (theme === "#191c31") {
+        document.documentElement.classList.add("#191c31");
       } else {
-        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.remove("#191c31");
       }
     }
   }, [theme, isInitialized]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => (prevTheme === "light" ? "#191c31" : "light"));
   };
 
   return (
