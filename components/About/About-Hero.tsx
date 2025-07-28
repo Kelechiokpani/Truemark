@@ -1,3 +1,7 @@
+"use client"
+import { motion } from "framer-motion";
+import { ReactTyped } from "react-typed";
+
 const AboutHero = () => {
   return (
     <section className="lg:grid lg:h-screen lg:place-content-center  transition-colors duration-300">
@@ -7,10 +11,36 @@ const AboutHero = () => {
             🔥About
             <strong className="text-[#387467] dark:text-[#387467]"> True-Mark </strong>
           </h1>
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">
-            Who We Are
-            <strong className="text-[#387467] dark:text-[#387467]"> True - Mark </strong>
-          </h1>
+
+          <motion.h1
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-[28px] leading-[30px] md:text-[40px] md:leading-[55px] xl:text-[40px] xl:leading-[70px] mb-6 font-bold capitalize"
+          >
+              we deliver{" "}
+            <span className="text-[#387467]">world-class certification solutions</span> for{" "}
+            <br/>
+            <span className="text-[#387467]">
+                <ReactTyped
+                  strings={[
+                    "Global Standards",
+                    "Trusted Compliance",
+                    "Sustainable Growth"
+                  ]}
+                  typeSpeed={100}
+                  backSpeed={100}
+                  backDelay={3000}
+                  loop
+                />
+         </span>
+          </motion.h1>
+
+          {/*<h1 className="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">*/}
+          {/*  Who We Are*/}
+          {/*  <strong className="text-[#387467] dark:text-[#387467]"> True - Mark </strong>*/}
+          {/*</h1>*/}
 
           <p className="mt-4 text-base text-pretty text-gray-700 dark:text-gray-300 sm:text-lg/relaxed">
             True-Mark Service Limited is a globally accredited certification and training body

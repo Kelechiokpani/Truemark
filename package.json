@@ -27,6 +27,7 @@
     "react-apexcharts": "^1.7.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
+    "react-typed": "^2.0.12",
     "swiper": "^9.3.2",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11"
