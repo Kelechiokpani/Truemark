@@ -10,6 +10,7 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
+import NextTopLoader from "nextjs-toploader";
 
 export default function RootLayout({
   children,
@@ -19,11 +20,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`dark:bg-black ${inter.className}`}>
+      <NextTopLoader
+        color="#1868DB"
+        initialPosition={0.08}
+        crawlSpeed={200}
+        height={2}
+        crawl={true}
+        showSpinner={true}
+        easing="ease"
+        speed={200}
+        shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+      />
+
         <ThemeProvider
           enableSystem={false}
           attribute="class"
           defaultTheme="light"
         >
+
           <Lines />
           <Header />
           <ToasterContext />
