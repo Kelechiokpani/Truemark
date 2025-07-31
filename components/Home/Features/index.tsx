@@ -14,10 +14,9 @@ const Feature = () => {
           <SectionHeader
             headerInfo={{
               title: "✅ TRUE-MARK FEATURES",
-              subtitle: "Core Features of True-mark",
-            //   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            // convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            // ante in maximus.`,
+              subtitle: "Why Get Certified with Truemark global standards and solutions.",
+              description: `We empower Nigerian Business organizations by providing internationally accepted conformity 
+              assessments and certifications, bridging the gap between local businesses and global standards.`
             }}
           />
           {/* <!-- Section Title End --> */}

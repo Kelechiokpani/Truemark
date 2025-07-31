@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`dark:bg-black ${inter.className}`}>
+      <body className={`dark:bg-black ${inter.className}`} suppressHydrationWarning>
       <NextTopLoader
         color="#1868DB"
         initialPosition={0.08}
@@ -32,11 +32,11 @@ export default function RootLayout({
         shadow="0 0 10px #2299DD,0 0 5px #2299DD"
       />
 
-        <ThemeProvider
-          enableSystem={false}
-          attribute="class"
-          defaultTheme="light"
-        >
+        {/*<ThemeProvider*/}
+        {/*  enableSystem={false}*/}
+        {/*  attribute="class"*/}
+        {/*  defaultTheme="light"*/}
+        {/*>*/}
 
           <Lines />
           <Header />
@@ -44,7 +44,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
-        </ThemeProvider>
+        {/*</ThemeProvider>*/}
       </body>
     </html>
   );

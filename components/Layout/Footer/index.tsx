@@ -14,19 +14,19 @@ const Footer = () => {
                 variants={{
                   hidden: {
                     opacity: 0,
-                    y: -20,
+                    y: -20
                   },
 
                   visible: {
                     opacity: 1,
-                    y: 0,
-                  },
+                    y: 0
+                  }
                 }}
                 initial="hidden"
                 whileInView="visible"
                 transition={{ duration: 1, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="animate_top w-1/2 lg:w-1/4"
+                className="animate_top w-1/2 lg:w-1/3"
               >
                 <a href="/public" className="relative">
                   <Image
@@ -48,26 +48,25 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-8">
-                  Truemark Service Limited is dedicated to empowering
-                  Nigerian businesses through certification excellence.
-                  Our vision, mission,
-                  and values drive us to provide top-notch certification
-                  services that meet international standards.
+                  Truemark global standards and solutions (TMGSS) is Nigeria most trusted conformity assessment and
+                  certification body,
+                  offering globally accepted certifications in the continent of Africa like certification, Halal
+                  certification,outsourcing,Inspection, Verification & Validation, Auditing. As a trusted partner in
+                  certification, Inspection, outsourcing,Verification & Validation,
+                  Auditing. we help our partners, organizations meet international standards and thrive in global
+                  markets.
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   contact
                 </p>
-                <a
-                  href="#"
-                  className="text-itemtitle font-medium text-black dark:text-white"
-                >
-                  anya.i@truemarkglobal.com
-                </a>
+                <a href="mailto:info.truemarkglobal@gmail.com"
+                   className="text-itemtitle font-medium text-black dark:text-white"
+                >info.truemarkglobal@gmail.com</a>
               </motion.div>
 
               <div
-                className="flex w-full mt-8 pt-8 flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-3/3 xl:w-8/12">
+                className="flex w-full mt-8 pt-8 flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-3/3 xl:w-7/12">
 
                 <motion.div
                   variants={{

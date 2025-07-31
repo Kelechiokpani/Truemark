@@ -187,7 +187,7 @@ const Contact = () => {
                   Email Address
                 </h3>
                 <p>
-                  <a href="#"> anya.i@truemarkglobal.com </a>
+                  <a href="mailto:info.truemarkglobal@gmail.com">info.truemarkglobal@gmail.com</a>
                 </p>
               </div>
               <div>

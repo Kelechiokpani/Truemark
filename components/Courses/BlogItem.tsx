@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation';
 
 const BlogItem = ({ course }: {course: Course }, ) => {
-// const BlogItem = ({ blog, course }: { blog: Blog, course: Course }, ) => {
+// const CertificationItem = ({ blog, course }: { blog: Certifications, course: Course }, ) => {
   // const { mainImage, title, metadata } = blog;
 
 

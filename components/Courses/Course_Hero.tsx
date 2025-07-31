@@ -1,7 +1,7 @@
 const Course_Hero = () => {
   return (
-    <section className="lg:grid mt-[6rem] lg:place-content-center  transition-colors duration-300">
-      <div className="mx-auto w-screen max-w-screen-xl px-4 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-16">
+    <section className="lg:grid mt-[7rem] lg:place-content-center  transition-colors duration-300">
+      <div className="mx-auto w-screen max-w-screen-xl px-4 mt-[4rem] sm:px-8 ">
         <div className="mx-auto max-w-prose text-center">
 
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl">

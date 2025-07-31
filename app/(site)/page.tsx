@@ -10,8 +10,9 @@ import CTA from "components/Home/CTA";
 import FAQ from "components/Home/FAQ";
 // import Testimonial from "components/Home/Testimonial";
 import Contact from "components/Home/Contact";
+import HeroSlider from "@/components/Home/Hero/HeroSlider";
 // import Pricing from "@/components/Pricing";
-// import Blog from "components/Courses";
+// import Certifications from "components/Courses";
 
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <HeroSlider />
       <Hero />
       <Brands />
       <Feature />
@@ -35,7 +37,7 @@ export default function Home() {
       {/*<Testimonial />*/}
 
       {/*<Pricing />*/}
-      {/*<Blog />*/}
+      {/*<Certifications />*/}
     </main>
   );
 }

@@ -3,8 +3,8 @@ import { FAQ } from "@/types/faq";
 const faqData: FAQ[] = [
   {
     id: 1,
-    quest: "What types of certifications does TRUE-MARK GLOBAL offer?",
-    ans: "We provide product, system (ISO standards), safety, and environmental certifications across various industries.",
+    quest: "What types of courses does TRUE-MARK GLOBAL offer?",
+    ans: "We provide product, system (ISO standards), safety, and environmental courses across various industries.",
   },
   {
     id: 2,
@@ -13,13 +13,13 @@ const faqData: FAQ[] = [
   },
   {
     id: 3,
-    quest: "Can I manage my audits and certifications online?",
+    quest: "Can I manage my audits and courses online?",
     ans: "Yes. Our online platform allows full access to manage documentation, monitor status, receive alerts, and communicate with auditors in real-time.",
   },
   {
     id: 4,
     quest: "Do you offer international certification services?",
-    ans: "Absolutely. We are accredited to issue certifications that are recognized globally, making international trade and compliance easier for your business.",
+    ans: "Absolutely. We are accredited to issue courses that are recognized globally, making international trade and compliance easier for your business.",
   },
   {
     id: 5,

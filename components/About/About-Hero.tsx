@@ -43,11 +43,9 @@ const AboutHero = () => {
           {/*</h1>*/}
 
           <p className="mt-4 text-base text-pretty text-gray-700 dark:text-gray-300 sm:text-lg/relaxed">
-            True-Mark Service Limited is a globally accredited certification and training body
-            dedicated to developing professionals and organizations through internationally
-            recognized standards. We operate with accreditations to ISO/IEC 17024 (Personnel Certification),
-            17021 (Management System Certification), and 17065 (Product Certification),
-            ensuring our services meet the highest level of global credibility and compliance.
+            Truemark global standards and solutions (TMGSS) is Nigeria most trusted conformity assessment and certification body,
+            offering globally accepted certifications in the continent of Africa like  certification, Halal certification,outsourcing,Inspection, Verification & Validation, Auditing. As a trusted partner  in certification, Inspection, outsourcing,Verification & Validation,
+            Auditing. we help our partners, organizations meet international standards and thrive in global markets.
           </p>
 
           <div className="mt-4 flex justify-center gap-4 sm:mt-6">

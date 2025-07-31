@@ -31,7 +31,7 @@ const Header = () => {
     <header
       className={`fixed left-0 top-0 z-99999 w-full py-6 ${
         stickyMenu
-          ? "bg-white py-4! mt-6 shadow-sm transition duration-100 dark:bg-black"
+          ? "bg-white py-4!  shadow-md transition duration-100 dark:bg-black"
           : ""
       }`}
     >
@@ -43,7 +43,7 @@ const Header = () => {
               // src="/images/logo/Logo2.png"
               src="/images/Green-Logo.png"
               alt="logo"
-              width={150}
+              width={180}
               height={100}
               className="hidden dark:block"
             />
@@ -51,7 +51,7 @@ const Header = () => {
               // src="/images/logo/Logo1.png"
               src="/images/Green-Logo.png"
               alt="logo"
-              width={150}
+              width={180}
               height={100}
               className="dark:hidden"
             />
@@ -108,12 +108,12 @@ const Header = () => {
           <nav>
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
-                <li key={key} className={menuItem.submenu && "group relative"}>
+                <li key={key} className={menuItem.submenu && "group relative text-[#000]"}>
                   {menuItem.submenu ? (
                     <>
                       <button
                         onClick={() => setDropdownToggler(!dropdownToggler)}
-                        className="flex cursor-pointer items-center justify-between gap-3 hover:text-[#387467]"
+                        className="flex cursor-pointer items-center justify-between gap-3  hover:text-[#387467]"
                       >
                         {menuItem.title}
                         <span>
@@ -129,10 +129,10 @@ const Header = () => {
                       </button>
 
                       <ul
-                        className={`dropdown ${dropdownToggler ? "flex" : ""}`}
+                        className={`dropdown border-t-[#387467] border-t-2  ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-[#387467]">
+                          <li key={key} className="hover:text-[#387467] text-[#000]">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -143,8 +143,8 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-[#387467] hover:text-[#387467]"
-                          : "hover:text-[#387467]"
+                          ? "text-[#000] hover:text-[#387467]"
+                          : "hover:text-[#387467] text-[#000]"
                       }
                     >
                       {menuItem.title}
@@ -156,20 +156,20 @@ const Header = () => {
           </nav>
 
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <ThemeToggler />
+            {/*<ThemeToggler />*/}
 
             <Link
               href="/auth/signup"
-              className="text-regular font-medium text-waterloo hover:text-[#387467]"
+              className="text-regular font-medium text-[#000] hover:text-[#387467]"
             >
-              Sign Up 🌟
+              Sign Up
             </Link>
 
             <Link
               href="/auth/signin"
-              className="flex items-center justify-center rounded-full bg-[#387467]  px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-[#387467] ho"
+              className="flex items-center justify-center rounded-sm bg-[#387467]  px-7.5 py-1.5 text-regular text-white duration-300 ease-in-out hover:bg-[#387467] ho"
             >
-             Login🔥
+             Login
             </Link>
           </div>
         </div>

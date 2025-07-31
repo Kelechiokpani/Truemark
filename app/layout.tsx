@@ -16,7 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${outfit.className} dark:bg-gray-900`}>
+      <body className={`${outfit.className} `}>
+      {/*<body className={`${outfit.className} dark:bg-gray-900`}>*/}
       <NextTopLoader
         color="#1868DB"
         initialPosition={0.08}
