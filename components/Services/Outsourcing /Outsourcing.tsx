@@ -76,7 +76,7 @@ const TM_Outsourcing = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    🔹 Cost Efficiency
+                     Cost Efficiency
                   </h3>
 
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
@@ -94,7 +94,7 @@ const TM_Outsourcing = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    🔹 Access to Expertise
+                     Access to Expertise
                   </h3>
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
                     Tap into our deep pool of experienced professionals and subject-matter experts. We bring specialized skills,
@@ -113,7 +113,7 @@ const TM_Outsourcing = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    🔹 Focus on Core Activities
+                     Focus on Core Activities
                   </h3>
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
                     Outsource the complexity—focus on strategy. Our services free up your internal teams so they can concentrate on
@@ -132,7 +132,7 @@ const TM_Outsourcing = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    🔹 Scalability
+                     Scalability
                   </h3>
 
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
@@ -151,7 +151,7 @@ const TM_Outsourcing = () => {
                 </div>
                 <div className="w-3/4">
                   <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    🔹 Quality Improvement
+                     Quality Improvement
                   </h3>
 
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">
@@ -160,8 +160,8 @@ const TM_Outsourcing = () => {
                   </p>
 
                 </div>
-
               </div>
+
               <div className="mt-7.5 flex items-center gap-5">
                 <div
                   className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
@@ -172,7 +172,7 @@ const TM_Outsourcing = () => {
 
                 <div className="w-3/4">
                   <h3 className="font-bold mb-0.5 text-metatitle2 text-black dark:text-white">
-                    🔹 Ongoing Support
+                     Ongoing Support
                   </h3>
 
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300 ">

@@ -31,7 +31,7 @@ const TM_Auditing = () => {
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">01</p>
                 </div>
                 <div className="w-11/12">
-                  <h3 className="font-bold text-metatitle2 text-black dark:text-white">🔹 Compliance</h3>
+                  <h3 className="font-bold text-metatitle2 text-black dark:text-white"> Compliance</h3>
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300">
                     Our audits verify that your organization adheres to local, national, and international regulations,
                     industry-specific standards, and internal policies. This helps reduce legal exposure, avoid penalties,
@@ -46,7 +46,7 @@ const TM_Auditing = () => {
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">02</p>
                 </div>
                 <div className="w-11/12">
-                  <h3 className="font-bold text-metatitle2 text-black dark:text-white">🔹 Risk Management</h3>
+                  <h3 className="font-bold text-metatitle2 text-black dark:text-white"> Risk Management</h3>
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300">
                     We identify potential risks, control weaknesses, and fraud vulnerabilities across your operations.
                     Our risk-based audit approach enables your leadership to take proactive measures, strengthen internal
@@ -61,7 +61,7 @@ const TM_Auditing = () => {
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">03</p>
                 </div>
                 <div className="w-11/12">
-                  <h3 className="font-bold text-metatitle2 text-black dark:text-white">🔹 Operational Efficiency</h3>
+                  <h3 className="font-bold text-metatitle2 text-black dark:text-white"> Operational Efficiency</h3>
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300">
                     Audits are not just about compliance—they are tools for improvement. We analyze processes,
                     resource utilization, and workflow structures to highlight inefficiencies, redundancies, and
@@ -76,7 +76,7 @@ const TM_Auditing = () => {
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">04</p>
                 </div>
                 <div className="w-11/12">
-                  <h3 className="font-bold text-metatitle2 text-black dark:text-white">🔹 Credibility and Trust</h3>
+                  <h3 className="font-bold text-metatitle2 text-black dark:text-white"> Credibility and Trust</h3>
                   <p className="mt-4 text-1xl text-pretty text-gray-700 dark:text-gray-300">
                     An independent audit increases your organization’s credibility with investors, customers, regulators,
                     and partners. Verified financial statements and process reviews build confidence in your governance

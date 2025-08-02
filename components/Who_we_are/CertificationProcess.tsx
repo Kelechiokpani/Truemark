@@ -49,7 +49,7 @@ const CertificationProcess = () => {
             <li>Verify eligibility requirements for the chosen certification.</li>
           </ul>
           <p>
-            🔗 View all available certifications here:{' '}
+            View all available certifications here:
             <Link
               href="/courses"
               target="_blank"
@@ -59,7 +59,7 @@ const CertificationProcess = () => {
             </Link>
           </p>
           <p>
-            📝 Register for a course via:{' '}
+             Register for a course via:{' '}
             <Link
               href="https://truemark.com/courses/registration"
               target="_blank"
