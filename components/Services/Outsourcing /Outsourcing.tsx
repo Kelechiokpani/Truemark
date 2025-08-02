@@ -160,7 +160,6 @@ const TM_Outsourcing = () => {
                   </p>
 
                 </div>
-
               </div>
               <div className="mt-7.5 flex items-center gap-5">
                 <div
