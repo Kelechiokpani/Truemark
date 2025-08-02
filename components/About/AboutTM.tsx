@@ -215,6 +215,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { aboutContent } from "@/components/About/AboutData";
+import SectorsWeServe from "@/components/About/Services";
 
 const AboutTM = () => {
   const { section1, section2 } = aboutContent;
@@ -237,15 +238,15 @@ const AboutTM = () => {
                 src={section1.image}
                 alt="Section 1"
                 className="rounded-2xl dark:hidden"
-                width={600}
-                height={100}
+                width={700}
+                height={500}
               />
               <Image
                 src={section1.image}
                 alt="Section 1"
                 className="rounded-2xl hidden dark:block"
-                width={600}
-                height={100}
+                width={700}
+                height={500}
               />
             </motion.div>
 
@@ -278,6 +279,10 @@ const AboutTM = () => {
         </div>
       </section>
 
+
+      {/* SECTORS WE SERVE */}
+
+
       {/* ===== Section 2 ===== */}
       <section className="pb-20 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
@@ -297,34 +302,19 @@ const AboutTM = () => {
               <h2 className="text-2xl font-bold text-black dark:text-white mb-4">
                 {section2.visionSub}
               </h2>
-              <p className="text-black dark:text-white mb-6">{section2.visionText}</p>
+              {section2.benefits.map((item) => (
+                <div key={item.num} className="mt-6 flex items-start gap-5">
+                  <div className="h-12 w-12 flex items-center justify-center rounded-full border border-stroke dark:border-strokedark dark:bg-blacksection">
+                    <p className="font-semibold text-black dark:text-white">{item.num}</p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-black dark:text-white">{item.title}</h3>
+                    <p className="text-sm text-black dark:text-white">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
 
-              <h3 className="text-xl font-bold text-black dark:text-white mb-2">Our Values</h3>
-              <ul className="list-disc list-inside space-y-2 text-black dark:text-white mb-6">
-                {section2.values.map((v, idx) => (
-                  <li key={idx}>
-                    <strong>{v.label}:</strong> {v.desc}
-                  </li>
-                ))}
-              </ul>
 
-              <h3 className="text-xl font-bold text-black dark:text-white mb-2">Your Trusted Partner</h3>
-              <ul className="list-disc list-inside text-black dark:text-white mb-6">
-                {section2.partner.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-
-              <h3 className="text-xl font-bold text-black dark:text-white mb-2">Impartiality</h3>
-              <p className="mb-2 text-black dark:text-white">{section2.impartiality.intro}</p>
-              <ul className="list-disc list-inside text-black dark:text-white mb-6">
-                {section2.impartiality.points.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-
-              <h3 className="text-xl font-bold text-black dark:text-white mb-2">Objective Evidence</h3>
-              <p className="text-black dark:text-white">{section2.evidence}</p>
             </motion.div>
 
             {/* Image */}

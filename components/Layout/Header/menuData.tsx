@@ -12,48 +12,52 @@ const menuData: Menu[] = [
     id: 33,
     title: "Who We Are",
     newTab: false,
+    path: "/who_we_are",
     submenu: [
       {
         id: 1,
         title: "About Us",
         newTab: false,
-        path: "/about",
+        path: "/who_we_are",
       },
       {
         id: 2,
         title: "Our Accreditation",
         newTab: false,
-        path: "/#",
+        path: "/who_we_are/accreditation",
       },
       {
         id: 3,
-        title: "Certification Withdrawal Policy",
+        title: "Certification Withdrawal",
         newTab: false,
-        path: "/#",
+        path: "/who_we_are/certification_withdrawal_policy",
       },
       {
         id: 4,
-        title: "Certification Mark Use Policy",
+        title: "Certification Mark Use",
         newTab: false,
-        path: "/#",
+        path: "/who_we_are/certification_mark_use_policy",
       },
       {
         id: 5,
         title: "Certification Process",
         newTab: false,
-        path: "/#",
+        path: "/who_we_are/certification_process",
       },
       {
         id: 6,
         title: "Code of Ethics",
         newTab: false,
-        path: "/#",
+        path: "/who_we_are/code_of_ethics",
+      },
+      {
+        id: 7,
+        title: "Certification Catalogue",
+        newTab: false,
+        path: "/certification_catalogue",
       },
     ],
   },
-
-
-
 
   {
     id: 22,
@@ -143,45 +147,46 @@ const menuData: Menu[] = [
   },
   {
     id: 31,
-    title: "Compliance",
+    title: "Policy",
     newTab: false,
     submenu: [
       {
-        id: 7,
-        title: "Complaint/Appeal Policy",
+        id: 12,
+        title: "Privacy",
         newTab: false,
-        path: "/#",
+        path: "/policy",
+      },
+      {
+        id: 7,
+        title: "Complaint/Appeal",
+        newTab: false,
+        path: "/policy/complaint",
       },
       {
         id: 8,
-        title: "Confidentiality Policy",
+        title: "Confidentiality",
         newTab: false,
-        path: "/#",
+        path: "/policy/confidentiality",
       },
       {
         id: 9,
-        title: "Exam Retake Policy",
+        title: "Exam Retake",
         newTab: false,
-        path: "/#",
+        path: "/policy/exam_retake",
       },
       {
         id: 10,
-        title: "Exam Security Policy",
+        title: "Exam Security",
         newTab: false,
-        path: "/#",
+        path: "/policy/exam_security",
       },
       {
         id: 11,
-        title: "Impartiality Policy",
+        title: "Impartiality",
         newTab: false,
-        path: "/#",
+        path: "/policy/impartiality",
       },
-      {
-        id: 12,
-        title: "Privacy Policy",
-        newTab: false,
-        path: "/#",
-      },
+
     ],
   },
 

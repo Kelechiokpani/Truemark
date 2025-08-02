@@ -1,7 +1,6 @@
 import { Metadata } from "next";
-import AboutHero from "@/components/About/About-Hero";
-import AboutTM from "@/components/About/AboutTM";
-import SectorsWeServe from "@/components/About/Services";
+import ComplaintsAppealsPolicy from "@/components/Who_we_are(cont1)/ComplaintsAppealsPolicy";
+import PrivacyPolicy from "@/components/Who_we_are(cont1)/PrivacyPolicy";
 
 export const metadata: Metadata = {
   title: "True-Mark Global Standards & Solutions Limited",
@@ -11,10 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <AboutHero />
-      <AboutTM />
-      <SectorsWeServe/>
-
+    <PrivacyPolicy/>
     </main>
   );
 }

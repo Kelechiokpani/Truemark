@@ -79,7 +79,7 @@ export default function HeroSlider() {
             <div
               style={{
                 backgroundImage: `url(${slide.image})`,
-                height: "85vh",
+                height: "93vh",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 display: "flex",

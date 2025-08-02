@@ -103,14 +103,12 @@ const Hero = () => {
                 </span>
               </motion.h1>
 
-
               <p>
-                Truemark global standards and solutions (TMGSS) is Nigeria most trusted
-                conformity assessment and certification body, offering globally accepted
-                certifications in the continent of Africa like certification,
-                Halal certification,outsourcing,Inspection, Verification & Validation, Auditing.
-                As a trusted partner in certification, Inspection, outsourcing,Verification & Validation,
-                Auditing. we help our partners, organizations meet international standards and thrive in global markets.
+                Truemark global standards and solutions limited (TMGSS) is Nigeria most trusted conformity
+                assessment and certification body, offering globally accepted certifications in the continent of Africa like
+                certification,outsourcing,Inspection, Verification & Validation, Auditing.
+                As a trusted partner  in certification, Inspection, outsourcing,Verification & Validation, Auditing.
+                we help our partners, organizations meet international standards and thrive in global markets.
               </p>
 
 

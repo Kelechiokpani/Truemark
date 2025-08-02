@@ -9,7 +9,8 @@ import menuData from "./menuData";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
-  const [dropdownToggler, setDropdownToggler] = useState(false);
+  // const [dropdownToggler, setDropdownToggler] = useState(false);
+  const [activeDropdownIndex, setActiveDropdownIndex] = useState<number | null>(null);
   const [stickyMenu, setStickyMenu] = useState(false);
 
   const pathUrl = usePathname();
@@ -26,10 +27,10 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
   });
-
+  // fixed
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full py-6 ${
+      className={`sticky left-0 top-0 z-99999 w-full py-6  ${
         stickyMenu
           ? "bg-white py-4!  shadow-md transition duration-100 dark:bg-black"
           : ""
@@ -108,11 +109,13 @@ const Header = () => {
           <nav>
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
               {menuData.map((menuItem, key) => (
-                <li key={key} className={menuItem.submenu && "group relative text-[#000]"}>
+                  <li key={key} className={menuItem.submenu ? "group relative text-[#000]" : ""}>
                   {menuItem.submenu ? (
                     <>
                       <button
-                        onClick={() => setDropdownToggler(!dropdownToggler)}
+                        onClick={() =>
+                          setActiveDropdownIndex(activeDropdownIndex === key ? null : key)
+                        }
                         className="flex cursor-pointer items-center justify-between gap-3  hover:text-[#387467]"
                       >
                         {menuItem.title}
@@ -129,11 +132,18 @@ const Header = () => {
                       </button>
 
                       <ul
-                        className={`dropdown border-t-[#387467] border-t-2  ${dropdownToggler ? "flex" : ""}`}
+                        className={`dropdown mt-2 border-t-2 border-t-[#387467] flex-col gap-2 pl-4 ${
+                          activeDropdownIndex === key ? "flex" : "hidden"
+                        }`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-[#387467] text-[#000]">
-                            <Link href={item.path || "#"}>{item.title}</Link>
+                          <li key={key} className="hover:text-[#387467] text-[#000] py-3 px-2 hover:bg-[#387467]/10 cursor-pointer">
+                            <Link href={item.path || "#"}
+                                  onClick={() => {
+                                    setActiveDropdownIndex(null);
+                                    setNavigationOpen(false);
+                                  }}
+                            >{item.title}</Link>
                           </li>
                         ))}
                       </ul>
@@ -146,6 +156,10 @@ const Header = () => {
                           ? "text-[#000] hover:text-[#387467]"
                           : "hover:text-[#387467] text-[#000]"
                       }
+                      onClick={() => {
+                        setActiveDropdownIndex(null);
+                        setNavigationOpen(false);
+                      }}
                     >
                       {menuItem.title}
                     </Link>

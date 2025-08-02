@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={`${outfit.className} `}>
       {/*<body className={`${outfit.className} dark:bg-gray-900`}>*/}
       <NextTopLoader
-        color="#1868DB"
+        color="#387467"
         initialPosition={0.08}
         crawlSpeed={200}
         height={2}

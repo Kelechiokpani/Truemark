@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={` ${inter.className}`} suppressHydrationWarning>
       {/*<body className={`dark:bg-black ${inter.className}`} suppressHydrationWarning>*/}
       <NextTopLoader
-        color="#1868DB"
+        color="#387467"
         initialPosition={0.08}
         crawlSpeed={200}
         height={2}
