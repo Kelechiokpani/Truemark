@@ -65,61 +65,61 @@ const CourseDetails = () => {
 
           <h2 className="text-2xl font-semibold mb-4">Course Content:</h2>
 
-          {/* Tabs */}
-          <Tab.Group>
-            <Tab.List className="flex space-x-4 bg-gray-100 p-2 rounded mb-4">
-              {course.tabs.map((item, index) => (
-                <Tab
-                  key={index}
-                  className={({ selected }) =>
-                    `px-12 py-2 rounded-md text-sm font-medium focus:outline-none ${
-                      selected ? 'bg-[#b9291e] text-white' : 'bg-white text-gray-800 hover:bg-gray-200'
-                    }`
-                  }
-                >
-                  {item.title}
-                </Tab>
-              ))}
-            </Tab.List>
+          {/*/!* Tabs *!/*/}
+          {/*<Tab.Group>*/}
+          {/*  <Tab.List className="flex space-x-4 bg-gray-100 p-2 rounded mb-4">*/}
+          {/*    {course.tabs.map((item, index) => (*/}
+          {/*      <Tab*/}
+          {/*        key={index}*/}
+          {/*        className={({ selected }) =>*/}
+          {/*          `px-12 py-2 rounded-md text-sm font-medium focus:outline-none ${*/}
+          {/*            selected ? 'bg-[#b9291e] text-white' : 'bg-white text-gray-800 hover:bg-gray-200'*/}
+          {/*          }`*/}
+          {/*        }*/}
+          {/*      >*/}
+          {/*        {item.title}*/}
+          {/*      </Tab>*/}
+          {/*    ))}*/}
+          {/*  </Tab.List>*/}
 
-            <Tab.Panels>
-              {course.tabs.map((tab, tabIndex) => {
-                const accordionItems = course.accordion[tab.title] || [];
-                const activeIndex = openAccordions[tab.title] ?? null;
+          {/*  <Tab.Panels>*/}
+          {/*    {course.tabs.map((tab, tabIndex) => {*/}
+          {/*      const accordionItems = course.accordion[tab.title] || [];*/}
+          {/*      const activeIndex = openAccordions[tab.title] ?? null;*/}
 
-                return (
-                  <Tab.Panel key={tabIndex}>
-                    {accordionItems.length === 0 ? (
-                      <p className="text-gray-500">No content available.</p>
-                    ) : (
-                      accordionItems.map((item, idx) => (
-                        <div key={idx} className=" mb-4 bg-white ">
-                          <button
-                            onClick={() => toggleAccordion(tab.title, idx)}
-                            className={`w-full text-left p-4  ${
-                              activeAccordion[tab.title] === idx ? "bg-[#1c4473] text-white rounded-tl-2xl rounded-tr-2xl" : "rounded-2xl bg-gray-100 hover:bg-gray-200"
-                            }`}
-                          >
-                            <span className="font-semibold text-lg">{item.title}</span>
-                          </button>
+          {/*      return (*/}
+          {/*        <Tab.Panel key={tabIndex}>*/}
+          {/*          {accordionItems.length === 0 ? (*/}
+          {/*            <p className="text-gray-500">No content available.</p>*/}
+          {/*          ) : (*/}
+          {/*            accordionItems.map((item, idx) => (*/}
+          {/*              <div key={idx} className=" mb-4 bg-white ">*/}
+          {/*                <button*/}
+          {/*                  onClick={() => toggleAccordion(tab.title, idx)}*/}
+          {/*                  className={`w-full text-left p-4  ${*/}
+          {/*                    activeAccordion[tab.title] === idx ? "bg-[#1c4473] text-white rounded-tl-2xl rounded-tr-2xl" : "rounded-2xl bg-gray-100 hover:bg-gray-200"*/}
+          {/*                  }`}*/}
+          {/*                >*/}
+          {/*                  <span className="font-semibold text-lg">{item.title}</span>*/}
+          {/*                </button>*/}
 
-                          {activeIndex === idx && (
-                            <div
-                              className="p-4 bg-white text-sm shadow rounded-br-2xl  rounded-bl-2xl ">
+          {/*                {activeIndex === idx && (*/}
+          {/*                  <div*/}
+          {/*                    className="p-4 bg-white text-sm shadow rounded-br-2xl  rounded-bl-2xl ">*/}
 
-                              <p className="mt-4 mb-10 leading-loose tracking-wide">
-                                {item.content}
-                              </p>
-                            </div>
-                            )}
-                        </div>
-                      ))
-                    )}
-                  </Tab.Panel>
-                );
-              })}
-            </Tab.Panels>
-          </Tab.Group>
+          {/*                    <p className="mt-4 mb-10 leading-loose tracking-wide">*/}
+          {/*                      {item.content}*/}
+          {/*                    </p>*/}
+          {/*                  </div>*/}
+          {/*                  )}*/}
+          {/*              </div>*/}
+          {/*            ))*/}
+          {/*          )}*/}
+          {/*        </Tab.Panel>*/}
+          {/*      );*/}
+          {/*    })}*/}
+          {/*  </Tab.Panels>*/}
+          {/*</Tab.Group>*/}
 
           {/*<h2 className="text-2xl font-semibold mb-2">Courses:</h2>*/}
           {/*<ul className="space-y-4">*/}

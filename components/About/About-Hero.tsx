@@ -8,7 +8,7 @@ const AboutHero = () => {
       <div className="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-32">
         <div className="mx-auto text-center">
           <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-            🔥About
+            About
             <strong className="text-[#387467] dark:text-[#387467]"> True-Mark </strong>
           </h1>
 

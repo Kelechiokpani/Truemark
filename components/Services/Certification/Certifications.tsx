@@ -52,7 +52,7 @@ const TM_Certifications = () => {
               <div className="space-y-10">
                 <div>
                   <h3 className="font-bold text-metatitle2 text-black dark:text-white">
-                    🔹 Product Certification
+                     Product Certification
                   </h3>
                   <p className="mt-4 text-1xl text-gray-700 dark:text-gray-300">
                     We evaluate and confirm that your products align with both national and international quality and safety standards.
@@ -60,7 +60,7 @@ const TM_Certifications = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-metatitle2 text-black dark:text-white">
-                    🔹 System Certification
+                     System Certification
                   </h3>
                   <p className="mt-4 text-1xl text-gray-700 dark:text-gray-300">
                     Our system certification services validate that your management systems comply with globally accepted standards such as ISO 9001, ISO 14001, and ISO 45001.
@@ -68,7 +68,7 @@ const TM_Certifications = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-metatitle2 text-black dark:text-white">
-                    🔹 Safety Certification
+                     Safety Certification
                   </h3>
                   <p className="mt-4 text-1xl text-gray-700 dark:text-gray-300">
                     TRUE-MARK GLOBAL ensures your processes, machinery, and products meet stringent health and safety standards.
@@ -76,7 +76,7 @@ const TM_Certifications = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-metatitle2 text-black dark:text-white">
-                    🔹 Environmental Certification
+                     Environmental Certification
                   </h3>
                   <p className="mt-4 text-1xl text-gray-700 dark:text-gray-300">
                     We help organizations validate their environmental responsibility through standards like ISO 14001 and sustainability criteria.
@@ -84,7 +84,7 @@ const TM_Certifications = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-metatitle2 text-black dark:text-white">
-                    🔹 Standards Certification
+                     Standards Certification
                   </h3>
                   <ul className="list-disc pl-5 mt-4 text-1xl text-gray-700 dark:text-gray-300 space-y-2">
                     <li>ISO/IEC 17021 – Certification of management systems</li>
@@ -95,7 +95,7 @@ const TM_Certifications = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-metatitle2 text-black dark:text-white">
-                    🔹 Ancillary Services
+                     Ancillary Services
                   </h3>
                   <ul className="list-disc pl-5 mt-4 text-1xl text-gray-700 dark:text-gray-300 space-y-2">
                     <li>Consulting</li>
