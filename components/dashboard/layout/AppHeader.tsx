@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState ,useEffect,useRef} from "react";
@@ -6,7 +7,7 @@ import { useSidebar } from "@/components/dashboard/context/SidebarContext";
 import { ThemeToggleButton } from "@/components/dashboard/components/common/ThemeToggleButton";
 import NotificationDropdown from "@/components/dashboard/components/header/NotificationDropdown";
 import UserDropdown from "@/components/dashboard/components/header/UserDropdown";
-
+import Logo from "../../../public/images/Green-Logo.png"
 
 
 const AppHeader: React.FC = () => {
@@ -87,17 +88,17 @@ const AppHeader: React.FC = () => {
 
           <Link href="/" className="lg:hidden">
             <Image
-              width={154}
-              height={32}
+              width={500}
+              height={500}
               className="dark:hidden"
-              src="./images/logo/logo.svg"
+              src={Logo}
               alt="Logo"
             />
             <Image
-              width={154}
-              height={32}
+              width={500}
+              height={500}
               className="hidden dark:block"
-              src="./images/logo/logo-dark.svg"
+              src={Logo}
               alt="Logo"
             />
           </Link>
@@ -164,10 +165,10 @@ const AppHeader: React.FC = () => {
         >
           <div className="flex items-center gap-2 2xsm:gap-3">
             {/* <!-- Dark Mode Toggler --> */}
-            <ThemeToggleButton />
+            {/*<ThemeToggleButton />*/}
             {/* <!-- Dark Mode Toggler --> */}
 
-           <NotificationDropdown /> 
+           <NotificationDropdown />
             {/* <!-- Notification Menu Area --> */}
           </div>
           {/* <!-- User Area --> */}

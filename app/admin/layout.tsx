@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { useSidebar } from "@/components/dashboard/context/SidebarContext";
 import AppSidebar from "@/components/dashboard/layout/AppSidebar";
 import Backdrop from "@/components/dashboard/layout/Backdrop";

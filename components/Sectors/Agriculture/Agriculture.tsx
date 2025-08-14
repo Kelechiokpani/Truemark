@@ -7,7 +7,7 @@ export default function AgricultureFoodBeverage() {
     // <section className="lg:grid lg:h-screen   lg:place-content-center  transition-colors duration-300">
     //   <div className="mx-auto w-screen max-w-screen-xl  px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-32">
     //
-        <section className="mt-[12rem] overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+        <section className="mt-[4rem] overflow-hidden pb-20 lg:pb-25 xl:pb-30">
           <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0 space-y-24">
         {/* Section 1: Agriculture */}
         <motion.div

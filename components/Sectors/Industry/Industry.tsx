@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Industry_Sector() {
   return (
-    <section className="mt-[12rem] overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+    <section className="mt-[4rem] overflow-hidden pb-20 lg:pb-25 xl:pb-30">
       <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0 space-y-24">
         {/* Section 1: Construction */}
         <motion.div

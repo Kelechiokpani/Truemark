@@ -54,6 +54,17 @@ const slides = [
       { text: "See Testimonials", color: "bg-blue-900", textColor: "text-white" },
     ],
   },
+  {
+    id: 5,
+    image: "/images/Home/bg1.webp",
+    headline: "JOIN OUR GLOBAL LEARNING COMMUNITY",
+    highlight: "Accredited ISO Courses",
+    typedWords: ["Global Students", "Certified Professionals", "ISO Enthusiasts"],
+    buttons: [
+      { text: "Join Now", color: "bg-red-600", textColor: "text-white" },
+      { text: "See Testimonials", color: "bg-blue-900", textColor: "text-white" },
+    ],
+  },
 
 ];
 
