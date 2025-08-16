@@ -11,7 +11,7 @@ import { ReactTyped } from "react-typed";
 const slides = [
   {
     id: 4,
-    image: "/images/slide/Slide-3.jpg",
+    image: "/images/Home/bg1.webp",
     headline: "BUILD YOUR CAREER WITH CERTIFIED COURSES",
     highlight: "Career-Focused ISO Programs",
     typedWords: ["Auditors", "Lead Implementers", "Certification Coaches"],
@@ -20,6 +20,7 @@ const slides = [
       { text: "Browse Programs", color: "bg-blue-900", textColor: "text-white" },
     ],
   },
+
   {
     id: 1,
     image: "/images/slide/Slide-1.jpg",
@@ -54,17 +55,7 @@ const slides = [
       { text: "See Testimonials", color: "bg-blue-900", textColor: "text-white" },
     ],
   },
-  {
-    id: 5,
-    image: "/images/Home/bg1.webp",
-    headline: "JOIN OUR GLOBAL LEARNING COMMUNITY",
-    highlight: "Accredited ISO Courses",
-    typedWords: ["Global Students", "Certified Professionals", "ISO Enthusiasts"],
-    buttons: [
-      { text: "Join Now", color: "bg-red-600", textColor: "text-white" },
-      { text: "See Testimonials", color: "bg-blue-900", textColor: "text-white" },
-    ],
-  },
+
 
 ];
 
@@ -112,8 +103,8 @@ export default function HeroSlider() {
                   {slide.headline}
                 </h1>
                 <p className="text-lg md:text-xl font-medium mb-8">
-                  <span className="text-blue-400 text-3xl">{slide.highlight} </span>
-                  <span className="text-blue-400  font-semibold ">
+                  <span className="text-[#ffff] text-3xl">{slide.highlight} </span>
+                  <span className="text-[#ffff]  font-semibold ">
                   {/*<span className="text-[#00FFAA] font-semibold ">*/}
                     <ReactTyped
                       strings={slide.typedWords}
