@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Technology_Media() {
   return (
-    <section className="mt-[12rem] overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+    <section className="mt-[4rem] overflow-hidden pb-20 lg:pb-25 xl:pb-30">
       <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0 space-y-24">
         {/* Section 1: Technology */}
         <motion.div
@@ -15,24 +15,33 @@ export default function Technology_Media() {
           className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
         >
           <div>
-            <h2 className="text-2xl mb-[1rem] font-bold">Technology</h2>
+            <h2 className="text-2xl mb-[1rem] font-bold">Certification in Technology and Media</h2>
             <p className="text-lg mb-4">
-              ICT enhances productivity, streamlines operations, and drives innovation. TRUE-MARK certification ensures digital solutions meet global standards for safety, performance, and sustainability.
+              ISO certification plays a crucial role in the Technology and Media sectors, ensuring quality, security,
+              and operational efficiency. It helps companies meet global standards, protect sensitive data, and improve
+              customer satisfaction.
             </p>
-            <ul className="list-disc pl-5 space-y-4">
-              <li><strong>Improving Connectivity:</strong> Bridges global communication and access to information.</li>
-              <li><strong>Elevating Quality of Life:</strong> Enables access to education, healthcare, and commerce.</li>
-              <li><strong>Supporting Sustainability:</strong> Aids in environmental protection and smart resource use.</li>
-              <li><strong>Standards:</strong> Ensures quality, security, and interoperability in ICT solutions.</li>
-              <li><strong>Security & Privacy:</strong> Validates data protection and cyber-resilience.</li>
-              <li><strong>Ethical Practices:</strong> Promotes responsible conduct and continuous professional growth.</li>
-              <li><strong>Consumer Confidence:</strong> Establishes trust in digital tools and platforms.</li>
-              <li><strong>Global Trade:</strong> Harmonizes international ICT standards for market entry.</li>
-              <li><strong>Digital Future:</strong> Drives safe, innovative tech adoption for lasting progress.</li>
+
+            <h3 className="text-xl font-semibold mb-2">Key ISO Standards for Technology</h3>
+            <ul className="list-disc pl-5 space-y-2 mb-4">
+              <li><strong>ISO 9001:</strong> Quality Management System – Consistent quality in products and services,
+                improving customer satisfaction and operational efficiency.
+              </li>
+              <li><strong>ISO 27001:</strong> Information Security Management – Protects sensitive information from
+                cyber threats.
+              </li>
+              <li><strong>ISO 20000:</strong> IT Service Management – Framework for delivering high-quality IT services.
+              </li>
+              <li><strong>ISO 14001:</strong> Environmental Management – Reduces environmental impact and improves
+                sustainability.
+              </li>
             </ul>
+
           </div>
+
           <div>
-            <Image src="/images/sectors/media1.jpg" alt="Governance" width={600} height={400} className="rounded-xl shadow-xl" />
+            <Image src="/images/sectors/media1.jpg" alt="Governance" width={600} height={400}
+                   className="rounded-xl shadow-xl" />
           </div>
         </motion.div>
 
@@ -45,23 +54,24 @@ export default function Technology_Media() {
           className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
         >
           <div>
-            <Image src="/images/sectors/media2.jpg" alt="Governance" width={600} height={400} className="rounded-xl shadow-xl" />
+            <Image src="/images/sectors/media2.jpg" alt="Governance" width={600} height={400}
+                   className="rounded-xl shadow-xl" />
           </div>
           <div>
-            <h2 className="text-2xl mb-[1rem] font-bold">Media</h2>
-            <p className="text-lg mb-4">
-              Media informs, educates, and connects people—fueling democracy and growth. TRUE-MARK helps ensure quality, ethics, and accountability in journalism and media production.
-            </p>
-            <ul className="list-disc pl-5 space-y-4">
-              <li><strong>Public Influence:</strong> Shapes awareness and promotes dialogue on critical topics.</li>
-              <li><strong>Community Engagement:</strong> Connects global audiences through shared platforms.</li>
-              <li><strong>Democracy & Transparency:</strong> Supports informed public discourse and oversight.</li>
-              <li><strong>Economic Impact:</strong> Stimulates jobs and innovation across industries.</li>
-              <li><strong>Quality & Credibility:</strong> Ensures reliable and accurate content.</li>
-              <li><strong>Ethical Practices:</strong> Encourages responsibility and fairness in reporting.</li>
-              <li><strong>Professional Growth:</strong> Validates media professionals’ skills and knowledge.</li>
-              <li><strong>Audience Trust:</strong> Builds confidence in certified media platforms.</li>
-              <li><strong>Global Standards:</strong> Aligns international practices for consistent media excellence.</li>
+            <h3 className="text-xl font-semibold mb-2">Key ISO Standards for Media</h3>
+            <ul className="list-disc pl-5 space-y-2 mb-4">
+              <li><strong>ISO 9001:</strong> Quality Management System – Consistent quality in media products and
+                services.
+              </li>
+              <li><strong>ISO 22301:</strong> Business Continuity Management – Ensures continuity of operations and
+                minimizes disruptions.
+              </li>
+              <li><strong>ISO 27001:</strong> Information Security Management – Protects sensitive information and
+                intellectual property.
+              </li>
+              <li><strong>ISO 14001:</strong> Environmental Management – Reduces environmental impact and improves
+                sustainability.
+              </li>
             </ul>
           </div>
         </motion.div>
@@ -75,22 +85,28 @@ export default function Technology_Media() {
           className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
         >
           <div>
-            <h2 className="text-2xl mb-[1rem] font-bold">Certification in ICT & Media</h2>
-            <p className="text-lg mb-4">
-              Certification plays a vital role in ensuring high standards in both ICT and Media sectors, helping professionals and organizations meet global benchmarks and build trust with users and audiences.
-            </p>
-            <ul className="list-disc pl-5 space-y-4">
-              <li><strong>Setting Standards:</strong> Maintains consistency and ensures quality across technologies and media.</li>
-              <li><strong>Security & Privacy:</strong> Protects digital infrastructure and personal data.</li>
-              <li><strong>Best Practices:</strong> Encourages ethics, competence, and ongoing development.</li>
-              <li><strong>Consumer Confidence:</strong> Builds trust in certified digital tools and published content.</li>
-              <li><strong>Global Compliance:</strong> Simplifies international market access and cooperation.</li>
-              <li><strong>Trust & Accountability:</strong> Promotes transparency and professional integrity.</li>
-              <li><strong>Resilient Future:</strong> Strengthens the foundation for secure, innovative growth.</li>
+
+            <h3 className="text-xl font-semibold mb-2">Benefits of ISO Certification</h3>
+            <ul className="list-disc pl-5 space-y-2 mb-4">
+              <li>Improved Quality – Enhanced product and service quality.</li>
+              <li>Increased Security – Protection of sensitive information and intellectual property.</li>
+              <li>Operational Efficiency – Streamlined processes and reduced waste.</li>
+              <li>Customer Satisfaction – Consistent delivery of high-quality services.</li>
+              <li>Competitive Advantage – Stand out from competitors through quality and security commitment.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold mb-2">Additional Services</h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Gap Analysis – Identify gaps between current practices and standard requirements.</li>
+              <li>Training and Awareness – Educate staff on ISO best practices.</li>
+              <li>Auditing and Assessment – Ensure compliance through regular audits.</li>
+              <li>Consulting – Guidance on implementing effective systems.</li>
             </ul>
           </div>
+
           <div>
-            <Image src="/images/sectors/media1.jpg" alt="Governance" width={600} height={400} className="rounded-xl shadow-xl" />
+            <Image src="/images/sectors/media1.jpg" alt="Governance" width={600} height={400}
+                   className="rounded-xl shadow-xl" />
           </div>
         </motion.div>
       </div>
