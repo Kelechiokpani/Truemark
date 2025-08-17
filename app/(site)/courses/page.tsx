@@ -1,9 +1,9 @@
 "use client"
-import CertificationData from "@/components/Certifications/CertificationData";
-import CertificationItem from "@/components/Certifications/CertificationItem";
+import CertificationData from "@/components/Website/Certifications/CertificationData";
+import CertificationItem from "@/components/Website/Certifications/CertificationItem";
 import { Metadata } from "next";
 import React, { useState } from "react";
-import Course_Hero from "@/components/Courses/Course_Hero";
+import Course_Hero from "@/components/Website/Courses/Course_Hero";
 
 
 // export const metadata: Metadata = {

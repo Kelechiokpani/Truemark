@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Automotive_Sector from "@/components/Sectors/Industry/AreoSpace_Automobile";
+import Automotive_Sector from "@/components/Website/Sectors/Industry/AreoSpace_Automobile";
 
 export const metadata: Metadata = {
   title: "True-Mark Global Standards & Solutions Limited",
