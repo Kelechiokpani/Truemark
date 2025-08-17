@@ -2,7 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import dynamicCourseDetails from '@/components/Certifications/Details/DetailsData';
+import dynamicCourseDetails from '@/components/Website/Certifications/Details/DetailsData';
 import { Tab } from '@headlessui/react';
 
 const CourseDetails = () => {

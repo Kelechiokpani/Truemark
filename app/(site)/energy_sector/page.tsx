@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import EnergyAndMining from "@/components/Sectors/Energy/Energy";
+import EnergyAndMining from "@/components/Website/Sectors/Energy/Energy";
 
 export const metadata: Metadata = {
   title: "True-Mark Global Standards & Solutions Limited",
