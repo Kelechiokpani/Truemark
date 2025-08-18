@@ -179,7 +179,7 @@ const Contact = () => {
                 <h3 className="mb-4 text-metatitle3 font-medium text-black dark:text-white">
                   Our Loaction
                 </h3>
-                <p> 3, M. T. Mbu Close, Off Mamman Kontagora Crescent, Katampe Extension, Abuja Nigeria</p>
+                {/*<p> 3, M. T. Mbu Close, Off Mamman Kontagora Crescent, Katampe Extension, Abuja Nigeria</p>*/}
                 <p>Abuja, Nigeria.</p>
               </div>
               <div className="5 mb-7">

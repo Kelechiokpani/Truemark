@@ -8,23 +8,23 @@ export const mainSideBar = [
     active_icon: sideIcons.dashboard_active,
   },
   {
-    label: "contact",
-    link: "/overview/contacts",
+    label: "course",
+    link: "/overview/course",
     icon: sideIcons.inventory,
     active_icon: sideIcons.inventory_active,
   },
-  {
-    label: "wallet",
-    link: "/overview/wallet",
-    icon: sideIcons.purchase,
-    active_icon: sideIcons.purchase_active,
-  },
-  {
-    label: "Referral",
-    link: "/overview/referral",
-    icon: sideIcons.sales,
-    active_icon: sideIcons.sales_active,
-  },
+  // {
+  //   label: "wallet",
+  //   link: "/overview/wallet",
+  //   icon: sideIcons.purchase,
+  //   active_icon: sideIcons.purchase_active,
+  // },
+  // {
+  //   label: "Referral",
+  //   link: "/overview/referral",
+  //   icon: sideIcons.sales,
+  //   active_icon: sideIcons.sales_active,
+  // },
 
 ];
 export const mainGeneral = [
