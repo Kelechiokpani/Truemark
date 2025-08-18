@@ -8,7 +8,7 @@ export default function MyLearningPage() {
 
   return (
     <div className="min-h-screen bg-white">
-        <CoursePage/>
+      <CoursePage/>
     </div>
   );
 }

@@ -4,13 +4,13 @@ import { Search, MoreVertical } from "lucide-react";
 import Image from "next/image"
 import cert2 from "../../public/images/cert/cert2.png"
 
-const tabs = ["All courses", "My Lists", "Wishlist", "Certifications", "Archived", "Learning tools"];
+const tabs = ["All courses", "My Lists", "Certifications",];
 
 const filters = {
   sortBy: ["Recently Accessed", "Newest", "Oldest"],
-  categories: ["Development", "Design", "Business", "Data Science"],
-  progress: ["In Progress", "Completed", "Not Started"],
-  instructor: ["Grant Gamble", "Deepak Dubey", "Ahmed Elsakka", "Anton Voroniuk"],
+  // categories: ["Development", "Design", "Business", "Data Science"],
+  // progress: ["In Progress", "Completed", "Not Started"],
+  // instructor: ["Grant Gamble", "Deepak Dubey", "Ahmed Elsakka", "Anton Voroniuk"],
 };
 
 const courses = [
@@ -67,19 +67,15 @@ export default function MyLearningPage() {
         {/* Weekly Streak */}
         <div className="border rounded-xl p-6 mb-6 flex flex-col md:flex-row justify-between items-center">
           <div>
-            <h2 className="text-xl font-semibold">Start a weekly streak</h2>
+            <h2 className="text-xl font-semibold">Start a Learning course now</h2>
             <p className="text-gray-600">Let’s chip away at your learning goals.</p>
           </div>
           <div className="flex items-center mt-4 md:mt-0 space-x-6">
             <div className="text-center">
-              <p className="text-2xl font-bold">0 weeks</p>
+              <p className="text-2xl font-bold"> weeks</p>
               <p className="text-gray-500 text-sm">Current streak</p>
             </div>
-            <div className="text-sm text-gray-600">
-              <p>0/30 course min</p>
-              <p>1/1 visit</p>
-              <p>Aug 11 - 18</p>
-            </div>
+
           </div>
         </div>
 
@@ -91,25 +87,11 @@ export default function MyLearningPage() {
                 <option key={f}>{f}</option>
               ))}
             </select>
-            <select className="border px-3 py-2 rounded-lg">
-              {filters.categories.map((f) => (
-                <option key={f}>{f}</option>
-              ))}
-            </select>
-            <select className="border px-3 py-2 rounded-lg">
-              {filters.progress.map((f) => (
-                <option key={f}>{f}</option>
-              ))}
-            </select>
-            <select className="border px-3 py-2 rounded-lg">
-              {filters.instructor.map((f) => (
-                <option key={f}>{f}</option>
-              ))}
-            </select>
+
             <button className="text-purple-600 text-sm">Reset</button>
           </div>
 
-          <div className="relative w-full md:w-64">
+          <div className="relative w-full md:w-84">
             <input
               type="text"
               placeholder="Search my courses"

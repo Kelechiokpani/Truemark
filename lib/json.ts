@@ -8,8 +8,8 @@ export const mainSideBar = [
     active_icon: sideIcons.dashboard_active,
   },
   {
-    label: "contact",
-    link: "/overview/contacts",
+    label: "course",
+    link: "/overview/course",
     icon: sideIcons.inventory,
     active_icon: sideIcons.inventory_active,
   },
