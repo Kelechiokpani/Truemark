@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import HlsVideoPlayer from "@/components/utility/VideoPlayer";
-import ReactPlayer from "react-player";
-
+import { useCourseStore } from "@/store/useCourseStore";
+import { useParams } from "next/navigation";
+import bg from "../../../public/images/cert/cert10.png"
+import Image from "next/image";
 
 
 interface VideoPlayerProps {
@@ -43,14 +44,17 @@ const lessons = [
 
 const CoursePage = () => {
   const [activeTab, setActiveTab] = useState("Course content");
+  const { slug } = useParams<{ slug: string }>(); // get slug
+  const { paidCourses } = useCourseStore();
+
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col ml-[3rem]">
       {/* Video Section */}
       <div className=" flex items-center justify-center h-50 md:h-[500px] lg:h-[500px] relative rounded-lg">
         <div className="w-full aspect-video">
-        {/*<div className="w-full max-w-6xl aspect-video">*/}
-          <div >
+          {/*<div className="w-full max-w-6xl aspect-video">*/}
+          <div>
             <HlsVideoPlayer
               poster=""
               src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
@@ -58,18 +62,22 @@ const CoursePage = () => {
               controls={true}
               width="80%"
               height="90%"
-               hlsConfig={{
+              hlsConfig={{
                 maxLoadingDelay: 4,
                 minAutoBitrate: 0,
                 lowLatencyMode: true
               }}
-        />
+            />
           </div>
+
         </div>
+        {/*<div>*/}
+        {/*  <Image src={bg} alt="bg" fill className="bg-cover w-full" />*/}
+        {/*</div>*/}
       </div>
 
       {/* Tabs */}
-      <div className="border-b bg-white px-4 mt-[3rem]">
+      <div className="border-b bg-white px-4 mt-[1rem]">
         <div className="flex gap-6 overflow-x-auto whitespace-nowrap text-sm text-gray-600 py-3">
           {TABS.map((tab) => (
             <button
@@ -130,6 +138,7 @@ const CoursePage = () => {
             <p>
               Content for <strong>{activeTab}</strong> will be displayed here.
             </p>
+
           </div>
         )}
       </div>

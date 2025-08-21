@@ -40,12 +40,19 @@ function SideBar() {
 
     <div
       className={cn(
-        " bg-white w-[288px] duration-150 flex flex-col shadow-lg",
+        " bg-white w-[280px] duration-150 flex flex-col shadow-lg",
         isOpen ? null : "w-[115px]"
       )}
     >
-      <div className="flex items-center h-[95px] relative px-8 shrink-0">
-        {isOpen ? <PrimaryLogo /> : <Logo />}
+      <div className="flex items-center h-[95px] relative px-6 shrink-0">
+        {isOpen ?
+          <Link href="/">
+            <PrimaryLogo />
+          </Link>:
+          <Link href="/">
+            <Logo />
+          </Link>
+           }
         <button
           className={cn(
             "absolute top-1/2 -translate-y-1/2 -right-3 bg-[#387467] w-8 h-8 flex justify-center items-center rounded-full z-30 duration-150",
@@ -78,10 +85,10 @@ function SideBar() {
               <Link
                 key={index}
                 className={cn(
-                  "hover:bg-green-50 group text-text text-sm font-medium rounded-lg py-3 px-4 flex gap-4 items-center capitalize duration-150",
+                  " hover:text-900 group text-text text-sm font-medium rounded-lg py-3 px-4 flex gap-4 items-center capitalize duration-150",
                   // menu.link === pathname ? "bg-[#FEC28B]" : null,
                   // active ? "bg-[#04BA99] text-white" : null,
-                  active ? "bg-[#387467] text-white" : null,
+                  active ? "bg-[#387467] text-white " : "hover:bg-green-50",
                   isOpen ? null : "hover:bg-transparent !bg-transparent"
                 )}
                 href={menu.link}

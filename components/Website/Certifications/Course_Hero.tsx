@@ -1,6 +1,6 @@
 const Course_Hero = () => {
   return (
-    <section className="lg:grid mt-[7rem] lg:place-content-center  transition-colors duration-300">
+    <section className="lg:grid mt-[1rem] lg:place-content-center  transition-colors duration-300">
       <div className="mx-auto w-screen max-w-screen-xl px-4 mt-[4rem] sm:px-8 ">
         <div className="mx-auto max-w-prose text-center">
 
