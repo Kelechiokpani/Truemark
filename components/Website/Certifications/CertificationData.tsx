@@ -1,6 +1,6 @@
-import { Blog } from "@/types/blog";
+import { CourseList } from "@/types/blog";
 
-const CertificationData: Blog[] = [
+const CertificationData: CourseList[] = [
   {
     _id: 1,
     mainImage: "/images/cert/cert1.png",
@@ -8,6 +8,8 @@ const CertificationData: Blog[] = [
     metadata: "QMS",
     category: "Quality, Health & Environment Mgt",
     slug: "iso-9001-qms",
+    status: 'paid',
+    price: "250000"
   },
   {
     _id: 2,
@@ -16,6 +18,8 @@ const CertificationData: Blog[] = [
     metadata: "ISMS",
     category: "Cyber & Privacy",
     slug: "iso-27001-isms",
+    status: 'not-paid',
+    price: "150000"
   },
   {
     _id: 3,
@@ -24,6 +28,8 @@ const CertificationData: Blog[] = [
     metadata: "BCMS",
     category: "Business Management",
     slug: "iso-22301-bcms",
+    status: 'not-paid',
+    price: "120000"
   },
   {
     _id: 4,
@@ -32,6 +38,8 @@ const CertificationData: Blog[] = [
     metadata: "ITSMS",
     category: "Info. Tech Mgt",
     slug: "iso-20000-itsms",
+    status: 'not-paid',
+    price: "150000"
   },
   {
     _id: 5,
@@ -40,6 +48,8 @@ const CertificationData: Blog[] = [
     metadata: "PIMS",
     category: "Cyber & Privacy",
     slug: "iso-27701-pims",
+    status: 'not-paid',
+    price: "150000"
   },
   {
     _id: 6,
@@ -48,6 +58,8 @@ const CertificationData: Blog[] = [
     metadata: "CLOUD SECURITY",
     category: "Cyber & Privacy",
     slug: "iso-27017-cloud-security",
+    status: 'not-paid',
+    price: "150000"
   },
   {
     _id: 7,
@@ -56,6 +68,8 @@ const CertificationData: Blog[] = [
     metadata: "CSR",
     category: "Business Management",
     slug: "iso-26000-csr",
+    status: 'not-paid',
+    price: "250000"
   },
   {
     _id: 8,
@@ -64,6 +78,8 @@ const CertificationData: Blog[] = [
     metadata: "UFIMS",
     category: "Info. Tech Mgt",
     slug: "iso-20022-ufims",
+    status: 'not-paid',
+    price: "450000"
   },
   {
     _id: 9,

@@ -1,7 +1,6 @@
-import { Brand } from "@/types/brand";
+// import { Brand } from "@/types/brand";
 
-
-const brandData: Brand[] = [
+const brandData: any[] = [
   {
     id: 0.25,
     name: "Government Agencies",

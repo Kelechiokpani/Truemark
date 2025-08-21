@@ -1,8 +1,12 @@
 import React from "react";
 import UserProfileComponent from "@/components/molecules/user-profile-component";
 import { icons } from "@/public/assets/icons";
+import Link from "next/link";
+import { useCourseStore } from "@/store/useCourseStore";
 
 function Header() {
+  const cart = useCourseStore((state) => state.cart);
+
   return (
     // <div className="h-[82px] flex items-center bg-white px-8 justify-between w-full">
     //   <div className="">
@@ -28,6 +32,24 @@ function Header() {
     {/* Right side - always visible */}
     <div className="flex gap-3 items-center ml-auto">
       <UserProfileComponent />
+
+      {/*<Link href="/overview/cart">*/}
+      {/*  <button className="w-6 h-6 flex items-center justify-center">*/}
+      {/*    {icons.cart_icon}*/}
+      {/*  </button>*/}
+      {/*</Link>*/}
+
+      <Link href="/overview/cart" className="relative">
+        <button className="w-6 h-6 flex items-center justify-center relative">
+          {icons.cart_icon}
+          {cart.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
+            {cart.length}
+          </span>
+          )}
+        </button>
+      </Link>
+
       <button className="w-8 h-8 flex items-center justify-center">
         {icons.notification_bell}
       </button>

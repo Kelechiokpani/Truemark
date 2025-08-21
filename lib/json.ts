@@ -13,12 +13,12 @@ export const mainSideBar = [
     icon: sideIcons.inventory,
     active_icon: sideIcons.inventory_active,
   },
-  // {
-  //   label: "wallet",
-  //   link: "/overview/wallet",
-  //   icon: sideIcons.purchase,
-  //   active_icon: sideIcons.purchase_active,
-  // },
+  {
+    label: "checkout-cart",
+    link: "/overview/cart",
+    icon: sideIcons.purchase,
+    active_icon: sideIcons.purchase_active,
+  },
   // {
   //   label: "Referral",
   //   link: "/overview/referral",

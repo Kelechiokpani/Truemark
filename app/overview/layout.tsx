@@ -18,7 +18,7 @@ export default function layout({ children }: { children: ReactNode }) {
         </div>
 
         {/* Scrollable content below header */}
-        <div className="px-6 pb-10 flex-grow mt-5 overflow-auto">
+        <div className="px-8 pb-10 flex-grow mt-5 overflow-auto ">
           {children}
         </div>
       </div>

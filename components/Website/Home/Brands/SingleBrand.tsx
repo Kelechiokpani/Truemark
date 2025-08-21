@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import Image from "next/image";
-import { Brand } from "@/types/brand";
+// import { Brand } from "@/types/brand";
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/Website/Common/SectionHeader";
 
-const SingleBrand = ({ brand }: { brand: Brand }) => {
+const SingleBrand = ({ brand }: { brand: any }) => {
   const { image, href, name, imageLight, id } = brand;
 
   return (
