@@ -4,6 +4,7 @@ const dynamicCourseDetails: Record<
     title: string;
     short: string;
     image: string;
+    video?: string;
     overview: string;
     benefits: string[];
     tabs: {
@@ -26,6 +27,7 @@ const dynamicCourseDetails: Record<
     title: "ISO 9001 Quality Management System",
     short: "Quality Management System",
     image: "/images/cert/cert1.png",
+    video: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
     overview:
     "As an international standard, ISO 9001 specifies the requirements for organizations that want to ensure continual improvement and meet customers’ needs. ISO 9001 was specifically designed to serve as a guiding framework for organizations of all sizes and industries as it provides a firm customer focus, namely delivering qualitative goods and services, which subsequently leads to customer satisfaction. The implementation of a Quality Management System is a strategic decision for organizations that aspire to improve their overall performance and provide a strong basis for sustainable development initiatives. The standard assists organizations and/or professionals to plan processes, interactions and have a risk-based thinking.\n" +
       "ISO 9001 certified professionals are considered as a strong asset to any organization. Meeting the future needs and expectations is a big challenge for organizations that operate in any industry, especially in today’s increasingly dynamic environment. Thus, in order to accomplish organizational objectives, it is important to understand the necessity of hiring experts on Quality Management Systems. By implementing ISO 9001, the certified professionals will help organizations to adopt continuous improvement practices and provide them with the essential techniques to ameliorate their working processes. As a result of increased efficiency, all the processes within the organization will be accordingly aligned and understood. Moreover, the productivity will increase, and the costs will decrease.",
@@ -129,6 +131,7 @@ After acquiring the necessary expertise to perform this audit, participants can 
     title: "ISO 27001 Information Security Management",
     short: "Information Security Management",
     image: "/images/iso-27001.png",
+    video: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
     overview:
       "This course explores the principles and controls of ISO 27001 for securing organizational information.",
     benefits: [

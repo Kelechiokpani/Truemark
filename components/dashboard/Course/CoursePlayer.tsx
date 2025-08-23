@@ -5,6 +5,7 @@ import { useCourseStore } from "@/store/useCourseStore";
 import { useParams } from "next/navigation";
 import bg from "../../../public/images/cert/cert10.png"
 import Image from "next/image";
+import dynamicCourseDetails from "@/components/Website/Certifications/Details/DetailsData";
 
 
 interface VideoPlayerProps {
@@ -46,7 +47,11 @@ const CoursePage = () => {
   const [activeTab, setActiveTab] = useState("Course content");
   const { slug } = useParams<{ slug: string }>(); // get slug
   const { paidCourses } = useCourseStore();
+  const params = useParams();
 
+  if (!slug || typeof slug !== 'string') return <p>Loading...</p>;
+
+  const course = dynamicCourseDetails[slug];
 
   return (
     <div className="flex flex-col ml-[3rem]">
@@ -97,40 +102,26 @@ const CoursePage = () => {
 
       {/* Content Area */}
       <div className="flex-1 overflow-y-auto bg-gray-50 p-4">
-        {/*{activeTab === "Course content" && (*/}
-        {/*  <div className="max-w-4xl mx-auto bg-white shadow rounded-lg">*/}
-        {/*    <div className="border-b p-4">*/}
-        {/*      <h2 className="font-semibold text-lg">*/}
-        {/*        Section 1: Dynamic Titles & User Labels*/}
-        {/*      </h2>*/}
-        {/*      <p className="text-sm text-gray-500">0 / 10 | 1hr 11min</p>*/}
-        {/*    </div>*/}
-        {/*    <ul className="divide-y">*/}
-        {/*      {lessons.map((lesson, idx) => (*/}
-        {/*        <li*/}
-        {/*          key={idx}*/}
-        {/*          className="flex justify-between items-center px-4 py-3 hover:bg-gray-100"*/}
-        {/*        >*/}
-        {/*          <div className="flex items-center gap-3">*/}
-        {/*            <input type="checkbox" className="w-4 h-4" />*/}
-        {/*            <div>*/}
-        {/*              <p className="text-sm font-medium">{lesson.title}</p>*/}
-        {/*              <p className="text-xs text-gray-500">{lesson.duration}</p>*/}
-        {/*            </div>*/}
-        {/*          </div>*/}
-        {/*          {lesson.resources && (*/}
-        {/*            <div className="relative">*/}
-        {/*              <button className="flex items-center text-purple-600 text-sm border border-purple-200 rounded px-2 py-1 hover:bg-purple-50">*/}
-        {/*                <span className="mr-1">Resources</span>*/}
-        {/*                <ChevronDownIcon className="w-4 h-4" />*/}
-        {/*              </button>*/}
-        {/*            </div>*/}
-        {/*          )}*/}
-        {/*        </li>*/}
-        {/*      ))}*/}
-        {/*    </ul>*/}
-        {/*  </div>*/}
-        {/*)}*/}
+        {activeTab === "Course content" && (
+          <main>
+            <div className="mt-[2rem] max-w-4xl  mx-auto px-4 py-8">
+              <h1 className="text-3xl font-bold mb-4">{course.title}</h1>
+              <img src={course.image} alt={course.title} className="w-full mb-4 rounded-md" />
+              <h2 className="text-3xl font-bold mb-6 text-black">Overview</h2>
+              <p className="mt-4 mb-10 leading-loose tracking-wide">
+                {course.overview}
+              </p>
+
+              <h2 className="text-3xl font-bold mb-2 text-black">Benefits of Certification</h2>
+              <ul className="list-disc pl-6 mb- gap-8">
+                {course.benefits.map((benefit, index) => (
+                  <li className='mb-4' key={index}>{benefit}</li>
+                ))}
+              </ul>
+
+            </div>
+          </main>
+        )}
 
         {/* Placeholder content for other tabs */}
         {activeTab !== "Course content" && (

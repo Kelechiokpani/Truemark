@@ -16,7 +16,6 @@ export default function Cart() {
 
   const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_KEY || "";
   const email = "customer@email.com"; // Replace with user email
-
   const componentProps = {
     email,
     amount: total * 100, // Paystack expects amount in kobo
@@ -36,11 +35,9 @@ export default function Cart() {
     onClose: () => alert("Payment closed"),
   };
 
-
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6 text-900">Shopping Cart</h1>
-
+      <h1 className="text-3xl font-bold mb-6 text-900">Course Checkout Cart</h1>
       <div className="min-h-screen bg-white p-4 md:p-10 rounded-lg ">
         {/*<div className="shadow-[0_4px_6px_rgba(0,0,0,0.1),0_-4px_6px_rgba(0,0,0,0.1),4px_0_6px_rgba(0,0,0,0.1),-4px_0_6px_rgba(0,0,0,0.1)] rounded-xl bg-white min-h-screen bg-white p-4 md:p-10  ">*/}
         {cart.length === 0 ? (
