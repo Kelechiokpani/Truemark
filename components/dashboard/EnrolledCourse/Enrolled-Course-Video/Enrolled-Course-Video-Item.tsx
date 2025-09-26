@@ -13,11 +13,8 @@ import { Modal } from "@/components/ui/modal";
 import { useModal } from "@/components/hooks/useModal";
 
 
-const CourseVideoItem = ({ courseListing, module }: { courseListing: CourseList, module:any }) => {
+const EnrolledCourseVideoItem = ({ courseListing, module }: { courseListing: CourseList, module:any }) => {
   const {image,  video, name, price, id, description } = courseListing;
-
-  const { isOpen, openModal, closeModal,   isUpdate,  openUpdate, closeUpdate,  isDelete, openDelete, closeDelete  } = useModal();
-
 
   return (
         <div className=" overflow-hidden  transition cursor-pointer">
@@ -48,4 +45,4 @@ const CourseVideoItem = ({ courseListing, module }: { courseListing: CourseList,
 
 };
 
-export default CourseVideoItem;
+export default EnrolledCourseVideoItem;

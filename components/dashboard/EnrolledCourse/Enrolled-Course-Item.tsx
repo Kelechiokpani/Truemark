@@ -6,28 +6,25 @@ import Link from "next/link";
 import React from "react";
 
 
-const CourseItem = ({ courseListing, paid }: { courseListing: CourseList, paid:boolean }) => {
+const EnrolledCourseItem = ({ courseListing, paid }: { courseListing: CourseList, paid: boolean }) => {
   const {image, name, price, id } = courseListing;
 
   const setSelectedCourse = useCourseStore((s) => s.setSelectedCourse);
-   const {addToCart, } = useCourseStore()
 
   const handleClick = () => {
     setSelectedCourse(courseListing);
   };
 
-   const paidUrl = `/overview/course/${courseListing.id}`
-   const url = `/overview/course/${courseListing.id}`
+   const paidUrl = `/overview/enrolled-course/${courseListing.id}`
+   const url = `/overview/enrolled-course/${courseListing.id}`
 
-  // `/overview/course/${courseListing.id}`
   return (
     <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer">
+      <Link
+        href={`/overview/enrolled-course/${courseListing.id}`}
+        onClick={handleClick}
+      >
       <div className="relative">
-        <Link
-          href={paid ? paidUrl : url}
-          // href={`/overview/course/${courseListing.id}`}
-          onClick={handleClick}
-        >
           <Image
             src={image}
             alt={name}
@@ -35,35 +32,26 @@ const CourseItem = ({ courseListing, paid }: { courseListing: CourseList, paid:b
             width={500}
             height={160}
           />
-        </Link>
       </div>
-
       <div className="p-4 flex justify-between">
         <h3 className="font-semibold ">{name}</h3>
       </div>
-
-      <p className="text-lg text-gray-600 px-5 ">
+       <p className="text-lg text-gray-600 px-5 ">
         {new Intl.NumberFormat("en-NG", {
           style: "currency",
           currency: "NGN",
         }).format(Number(price ?? 0))}
       </p>
-
-
        <div className="flex flex-col gap-4 py-2 px-4">
-        <button
-          onClick={() => addToCart(courseListing)}
-          className="bg-[#387467] text-white px-4 py-2 rounded-lg"
-        >
-          Add to Cart
-           {/*{isPaid ? "Already Enrolled" : "Add to Cart"}*/}
+        <button className="text-[#387467] px-4 py-2">
+          View course
         </button>
       </div>
 
-
+    </Link>
     </div>
   )
 
 };
 
-export default CourseItem;
+export default EnrolledCourseItem;

@@ -1,10 +1,10 @@
 "use client";
-import CourseListing from "@/components/dashboard/Course/CourseListing";
+import EnrolledCourseListing from "@/components/dashboard/EnrolledCourse/Enrolled-Course-Listing";
 
 export default function OverviewPage() {
   return (
     <div className="min-h-screen bg-white">
-      <CourseListing />
+      <EnrolledCourseListing />
     </div>
   );
 }

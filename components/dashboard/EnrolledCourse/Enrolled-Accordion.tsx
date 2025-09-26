@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import CourseVideoListing from "@/components/dashboard/Course/CourseVideo/CourseVideoListing";
+import EnrolledCourseVideoListing
+  from "@/components/dashboard/EnrolledCourse/Enrolled-Course-Video/Enrolled-Course-Video-Listing";
 
 
- const Accordion =({course, modules})=> {
+ const EnrolledAccordion =({course, modules})=> {
    const [id, setId] = useState('')
    const [openId, setOpenId] = useState<string | null>(null);
 
@@ -25,7 +26,7 @@ import CourseVideoListing from "@/components/dashboard/Course/CourseVideo/Course
             <div className="flex justify-between gap-2">
               <button
                 type="button"
-                className="px-8  flex items-center bg-gray-300 justify-between w-full py-4 font-medium text-gray-700 gap-3"
+                className="px-8 flex items-center bg-gray-300 justify-between w-full py-4 font-medium text-gray-700 gap-3"
                 onClick={() => toggle(module?.id)}
               >
                 <span className='text-sm'>{module?.name}</span>
@@ -57,8 +58,7 @@ import CourseVideoListing from "@/components/dashboard/Course/CourseVideo/Course
                    <p className="capitalize font-bold py-4">Description:</p>
                    <span className=" capitalize">{module?.description}</span>
                 </div>
-                <CourseVideoListing id={id} module={module} />
-
+                <EnrolledCourseVideoListing id={id} module={module} />
               </div>
             )}
 
@@ -76,4 +76,4 @@ import CourseVideoListing from "@/components/dashboard/Course/CourseVideo/Course
   );
  }
 
-export default Accordion
+export default EnrolledAccordion

@@ -2,9 +2,9 @@
 import React, { useMemo, useState } from "react";
 import EmptyContainer from "@/components/utility/EmptyContainer";
 import { useQuery } from "@apollo/client/react";
-import { GET_COURSES, GET_COURSES_LESSONS } from "@/lib/Query/queries";
+import { GET_COURSES, GET_COURSES_LESSONS, GET_USER_ENROLLED_COURSES_MODULES_LESSONS } from "@/lib/Query/queries";
 import CenteredLoader from "@/components/utility/Loader";
-import CourseVideoItem from "@/components/dashboard/Course/CourseVideo/CourseVideoItem";
+import EnrolledCourseVideoItem from "@/components/dashboard/EnrolledCourse/Enrolled-Course-Video/Enrolled-Course-Video-Item";
 
 
 const empty_details = {
@@ -14,9 +14,9 @@ const empty_details = {
   to:"/overview/course"
 }
 
-export default function CourseVideoListing({id, module}) {
+export default function EnrolledCourseVideoListing({id, module}) {
 
-  const { data, loading, error} = useQuery(GET_COURSES_LESSONS, {
+  const { data, loading, error} = useQuery(GET_USER_ENROLLED_COURSES_MODULES_LESSONS, {
     fetchPolicy: "cache-and-network",  variables:{moduleId:id},
     // fetchPolicy: 'network-only',
   }) as any;
@@ -24,7 +24,7 @@ export default function CourseVideoListing({id, module}) {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredCourses = useMemo(() => {
-    let List: any = data?.getCourseLessions || [];
+    let List: any = data?.getEnrolledModuleLessions || [];
 
     if (searchTerm.trim() !== "") {
       List = List.filter((c: any) =>
@@ -36,8 +36,9 @@ export default function CourseVideoListing({id, module}) {
   }, [searchTerm, data]);
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="px-6 py-8 max-w-7xl mx-auto">
+    <div className="bg-white">
+      <div className="px-6 py-6 ">
+      {/*<div className="px-8 py-8 max-w-7xl mx-auto">*/}
 
         {loading ? (
           <div className="flex items-center justify-center min-h-[300px] w-full">
@@ -49,9 +50,9 @@ export default function CourseVideoListing({id, module}) {
             description={empty_details.description}
           />
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCourses.map((post, key) => (
-              <CourseVideoItem key={key} courseListing={post} module={module} />
+              <EnrolledCourseVideoItem key={key} courseListing={post} module={module} />
             ))}
           </div>
         )}
