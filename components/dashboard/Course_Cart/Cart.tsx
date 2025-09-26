@@ -1,68 +1,82 @@
 "use client"
-import Link from "next/link";
 import { useCourseStore } from "@/store/useCourseStore";
+import EmptyContainer from "@/components/utility/EmptyContainer";
+import React from "react";
+import { useRouter } from "next/navigation";
+// import dynamic from "next/dynamic";
+import { useLazyQuery, useMutation } from "@apollo/client/react";
+import { BUY_COURSE } from "@/lib/Mutation/mutation";
+import { VERIFY_PAYMENT } from "@/lib/Query/queries";
+import { useFormik } from "formik";
+import Payment from "@/components/dashboard/Course_Cart/Payment";
+// import Image from "next/image"
+// const Payment = dynamic(() => import("@/components/dashboard/Course_Cart/Payment"), { ssr: false });
+
+
+const empty_details = {
+  title: "Your cart is empty",
+  description: "Looks like you haven’t added any courses yet.",
+  callToAction: "Browse Courses",
+  to:"/overview/course"
+}
 
 
 export default function Cart() {
-  const {
-    cart,
-    removeFromCart,
-    clearCart,
-    markAsPaid,
-  } = useCourseStore();
-
-  // const total = cart.reduce((sum, course) => sum + (course.price || 0), 0);
+  const router = useRouter();
+  const { cart, removeFromCart, clearCart, markAsPaid, } = useCourseStore();
   const total = cart.reduce((sum, course) => sum + Number(course.price ?? 0), 0);
 
-  const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_KEY || "";
-  const email = "customer@email.com"; // Replace with user email
-  const componentProps = {
-    email,
-    amount: total * 100, // Paystack expects amount in kobo
-    metadata: { cart },
-    publicKey,
-    text: "Pay Now",
-    onSuccess: (reference: any) => {
-      console.log("Payment successful:", reference);
+  const [BuyCourse, { loading, data }] = useMutation(BUY_COURSE, { awaitRefetchQueries: true,
+    onCompleted: (data) => {console.log(data, ".....payStack redirect")},
+    onError: (error) => {console.log(error, "error")}
+  })
 
-      // ✅ Mark courses as paid
-      const courseIds = cart.map((c) => c._id);
-      markAsPaid(courseIds);
+  const [verifyPayment] = useLazyQuery(VERIFY_PAYMENT);
 
-      // ✅ Clear the cart
-      clearCart();
+  const User = {
+    name:"kellyblaq",
+    email: "kellyblaq12@gmail.com"
+  }
+
+  const Course = {
+    id:"c100001",
+    price: "1000",
+    title: "ISO 90001 Management"
+  }
+
+  const formik = useFormik({
+    initialValues: {
+      courseId: '',
     },
-    onClose: () => alert("Payment closed"),
-  };
+    onSubmit: (values) => {
+      BuyCourse({ variables: {courseId:"ad31e86c-12ac-4b4c-b3e0-a9b05b2c3e6c"}})
+        .then((data) => {
+          console.log(data, "data.....")
+        })
+    },
+  })
 
-  //    "react-hls-player": "^3.0.7",
+  // console.log(cart, "cart...");
+
 
   return (
     <div>
       <h1 className="text-3xl font-bold mb-6 text-900">Course Checkout Cart</h1>
+      <button
+        onClick={() => router.back()}
+        className="mb-6 inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200"
+      >
+        ← Back
+      </button>
       <div className="min-h-screen bg-white p-4 md:p-10 rounded-lg ">
         {/*<div className="shadow-[0_4px_6px_rgba(0,0,0,0.1),0_-4px_6px_rgba(0,0,0,0.1),4px_0_6px_rgba(0,0,0,0.1),-4px_0_6px_rgba(0,0,0,0.1)] rounded-xl bg-white min-h-screen bg-white p-4 md:p-10  ">*/}
         {cart.length === 0 ? (
-          // ----------------- EMPTY CART -----------------
-          <div className="flex flex-col items-center justify-center py-20 text-center">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png"
-              alt="Empty cart"
-              className="w-40 h-40 mb-6 opacity-80"
-            />
-            <h2 className="text-xl font-semibold mb-2">
-              Your cart is empty
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Looks like you haven’t added any courses yet.
-            </p>
-            <Link href="/overview/course">
-              <button className="bg-[#387467] text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
-                Browse Courses
-              </button>
-            </Link>
-
-          </div>
+          <EmptyContainer
+            title={empty_details.title}
+            description={empty_details.description}
+            callToAction={empty_details.callToAction}
+            to={empty_details.to}
+          />
         ) : (
           // ----------------- CART ITEMS -----------------
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8  ">
@@ -72,19 +86,19 @@ export default function Cart() {
 
               {cart.map((course) => (
                 <div
-                  key={course._id}
+                  key={course.id}
                   className="flex flex-col md:flex-row gap-4 border-b pb-4 "
                 >
                   <img
-                    src={course.mainImage}
-                    alt={course.title}
+                    src={course.image}
+                    alt={course.name}
                     className="w-full md:w-40 h-28 object-cover rounded"
                   />
                   <div className="flex-1 space-y-1">
-                    <h3 className="font-semibold">{course.title}</h3>
+                    <h3 className="font-semibold">{course.name}</h3>
                     <div className="flex gap-4 text-sm text-[#387467] mt-8">
                       <button
-                        onClick={() => removeFromCart(course._id)}
+                        onClick={() => removeFromCart(course.id)}
                         className="hover:underline"
                       >
                         Remove
@@ -116,9 +130,11 @@ export default function Cart() {
                 }).format(total)}
               </p>
 
-              <button className="w-full bg-[#387467] hover:bg-green-700 text-white py-3 rounded-lg">
-                Proceed to Checkout →
-              </button>
+
+
+              {cart.length > 0 && (
+                <Payment courseId={cart[0].id} amount={total} />
+              )}
 
               <p className="text-xs text-gray-500 mt-2">
                 You won’t be charged yet
