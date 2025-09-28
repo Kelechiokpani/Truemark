@@ -47,8 +47,8 @@ export const FORGOT_USERS_PASSWORD = gql`
 
 
 export const BUY_COURSE = gql`
-    mutation BuyCourse($courseId: ID!) {
-        buyCourse(courseId: $courseId) {
+    mutation BuyCourse($courseIds: [ID!]!) {
+        buyCourse(courseIds: $courseIds) {
             paymentUrl
             paymentReference
             success
@@ -58,3 +58,18 @@ export const BUY_COURSE = gql`
 
 
 
+export const CUSTOMER_ENQUIRY = gql`
+    mutation CreateEnquiry($input: CreateEnquiryInput!) {
+        createEnquiry(input: $input) {
+            id
+            name
+            email
+            phoneNumber
+            subject
+            message
+            createdAt
+            updatedAt
+        }
+    }
+    
+`

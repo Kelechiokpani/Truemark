@@ -62,7 +62,7 @@ const Footer = () => {
                   />
                 </a>
 
-                <p className="mb-10 mt-8">
+                <p className="mb-10 mt-8 text-sm">
                   Truemark global standards and solutions (TMGSS) is Nigeria most trusted conformity assessment and
                   certification body,
                   offering globally accepted certifications in the continent of Africa like certification, Halal
@@ -76,12 +76,12 @@ const Footer = () => {
                   contact
                 </p>
                 <a href="mailto:info.truemarkglobal@gmail.com"
-                   className="text-itemtitle font-medium text-black dark:text-white"
+                   className="text-sm font-medium text-black dark:text-white"
                 >info.truemarkglobal@gmail.com</a>
               </motion.div>
 
               <div
-                className="flex w-full mt-8 pt-8 flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-3/3 xl:w-7/12">
+                className="flex text-sm w-full mt-8 pt-8 flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-3/3 xl:w-7/12">
 
                 <motion.div
                   variants={{
@@ -101,7 +101,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                  <h4 className="mb-9  font-medium text-black dark:text-white">
                     Quick Links
                   </h4>
                   <ul>
@@ -159,7 +159,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                  <h4 className="mb-9 font-medium text-black dark:text-white">
                     Services
                   </h4>
                   <ul>
@@ -190,7 +190,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                  <h4 className="mb-9  font-medium text-black dark:text-white">
                     Sectors
                   </h4>
 
@@ -221,7 +221,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top"
                 >
-                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                  <h4 className="mb-9  font-medium text-black dark:text-white">
                     Newsletter
                   </h4>
                   <p className="mb-4 w-[90%]">
@@ -271,7 +271,7 @@ const Footer = () => {
 
           {/* <!-- Footer Bottom --> */}
           <div
-            className="  flex flex-col flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 dark:border-strokedark lg:flex-row lg:justify-between lg:gap-0">
+            className="  flex text-sm flex-col flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 dark:border-strokedark lg:flex-row lg:justify-between lg:gap-0">
             <motion.div
               variants={{
                 hidden: {
