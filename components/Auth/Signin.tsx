@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import BgImage from "../../public/images/bg.jpg"
 import { useUserStore } from "@/store/useUserStore";
 import { useMutation  } from "@apollo/client/react";
-import { CREATE_USERS, LOGIN_USERS } from "@/lib/Mutation/mutation";
+import { LOGIN_USERS } from "@/lib/Mutation/mutation";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Eye, EyeOff } from "lucide-react";
