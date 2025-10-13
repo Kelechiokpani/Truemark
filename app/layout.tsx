@@ -4,8 +4,8 @@ import { SidebarProvider } from "@/components/dashboard/context/SidebarContext";
 import NextTopLoader from "nextjs-toploader";
 import { ApolloProvider } from "@apollo/client/react";
 import { client } from "@/lib/apolloClient";
-import useAppSecurity from "@/components/hooks/useAppSecurity";
 import { Toaster } from "react-hot-toast";
+import useAppSecurity from "@/components/hooks/useAppSecurity";
 
 export default function RootLayout({
   children,
