@@ -37,18 +37,17 @@ export default function Unauthorized() {
 
       {/* Text */}
       <h1 className="text-3xl font-bold text-gray-800 mb-4">
-        Unauthorized Access
+        Restricted Access
       </h1>
       <p className="text-sm text-gray-600 max-w-lg text-center mb-8">
-        You don’t have permission to view this page. Please make sure you’re
-        logged in with the right account or contact an administrator if you
-        believe this is a mistake.
+        This page is only accessible to users. Admin accounts do not have permission to view this page.
+        Please switch to a user account if you’d like to continue.
       </p>
 
       {/* Buttons */}
       <div className="flex gap-4">
         <Link
-          href="/"
+          href="/auth/signin"
           className="px-8 py-3 rounded-lg bg-[#387467] text-white font-semibold shadow-md hover:bg-[#2e5e55] transition"
         >
           Go Back Home
