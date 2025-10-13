@@ -12,7 +12,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // useAppSecurity();
+  useAppSecurity();
   return (
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning className="bg-[#f8fefb]">
