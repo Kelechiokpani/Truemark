@@ -4,10 +4,12 @@ import SideBar from "@/components/Layout/main/sidebar";
 import Header from "@/components/Layout/main/header";
 import { useQuery } from "@apollo/client/react";
 import { GET_USERS } from "@/lib/Query/queries";
-import Unauthorized from "@/components/hooks/Unauthorized";
 import { useUserStore } from "@/store/useUserStore";
 import CenteredLoader from "@/components/utility/Loader";
 import useAppSecurity from "@/components/hooks/useAppSecurity";
+import Unauthorized from "@/components/hooks/Unauthorized";
+import Unauthenticated from "@/components/hooks/Unauntheticated";
+
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -34,7 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   // If query errored or user not found
   if (error || !data?.getUserInfo) {
-    return <Unauthorized />;
+    return <Unauthenticated />;
   }
 
   // If user exists but not admin
@@ -51,12 +53,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Main content area */}
       <div className="flex-grow flex flex-col overflow-hidden">
         {/* Sticky header at the top */}
-        <div className="shrink-0">
+        <div className="shrink-0 ">
           <Header data={data} />
         </div>
 
         {/* Scrollable content below header */}
-        <main className="px-6 pb-10 flex-grow mt-5 overflow-auto">
+        <main className="px-4 pb-10  flex-grow mt-5 overflow-auto">
           {children}
         </main>
       </div>

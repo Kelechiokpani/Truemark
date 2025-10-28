@@ -1,11 +1,16 @@
 import { ApolloClient, InMemoryCache, createHttpLink, HttpLink, from } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { onError } from "@apollo/client/link/error";
+import { NEXT_PUBLIC_API_URL } from "@/lib/env";
+
 
 
 const httpLink = createHttpLink({
-  uri: "https://staging.api.truemarkglobalss.com/graphql",
+  uri: NEXT_PUBLIC_API_URL,
+  // uri: "https://staging.api.truemarkglobalss.com/graphql",
+  // uri: "https://api.truemarkglobalss.com/graphql",
 });
+
 
 // @ts-ignore
 export const errorLink = onError((graphQLErrors:any) => {
@@ -62,6 +67,7 @@ const authLink = setContext((_, { headers }) => {
     },
   };
 });
+
 
 export const client = new ApolloClient({
   link: from([authLink, errorLink, httpLink]),
